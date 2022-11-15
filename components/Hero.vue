@@ -3,7 +3,7 @@
     <img src="../assets/imgs/movieHero.jpg" alt="" />
     <div class="text-container">
       <div class="text">
-        <span class="mini-heading">Now Stremaing</span>
+        <span class="mini-heading">Movie Mania</span>
         <h1><span>Now</span> Streaming</h1>
         <a href="#movie-grid" class="button">View Movies</a>
       </div>
@@ -63,7 +63,8 @@ export default {
       font-weight: 600;
       font-size: 18px;
       text-transform: uppercase;
-      color: #c92502;
+      color: #02c997;
+      text-shadow:  #a8b6ae;
       margin-bottom: 8px;
       @media (min-width: 750px) {
         font-size: 22px;
@@ -71,7 +72,7 @@ export default {
     }
 
     h1 {
-      color: #fff;
+      color: rgb(39, 201, 66);
       font-size: 64px;
       font-weight: 200;
       margin-bottom: 8px;
@@ -88,6 +89,7 @@ export default {
     .button {
       font-size: 20px;
       align-self: flex-start;
+      background-color: adjust-hue($color: #379260, $degrees: 0);
     }
   }
 }

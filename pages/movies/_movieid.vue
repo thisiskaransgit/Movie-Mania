@@ -35,7 +35,7 @@
           {{
             movie.revenue.toLocaleString("en-us", {
               style: "currency",
-              currency: "USD",
+              currency:"INR",
             })
           }}
         </p>
@@ -72,7 +72,7 @@ export default {
   methods: {
     async getSingleMovie() {
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US`
+        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=ca72e31b869ecbc4749135096d0241a6&language=en-US`
       );
       const result = await data;
       this.movie = result.data;
@@ -130,6 +130,7 @@ export default {
 
         span {
           font-weight: 600;
+          color: rgb(105, 61, 61);
           text-decoration: underline;
         }
       }
