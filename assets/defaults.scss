@@ -19,7 +19,7 @@
 }
 
 .app {
-  background-color: #211f1f;
+  background-color: darken($color: #000000, $amount: 1);
   min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@
   text-decoration: none;
   color: inherit;
   padding: 8px 16px;
-  background-color: #c92502;
+  background-color: #25b661;
   border: none;
   color: #fff;
   border-radius: 4px;
@@ -36,13 +36,13 @@
   transition: 0.3s ease all;
 
   &:hover {
-    background-color: #891b02;
+    background-color: #25b661;
   }
 }
 
 .button-light {
   background-color: transparent;
-  border: 1px solid #c92502;
+  border: 1px solid #25b661;
 
   &:hover {
     border-color: transparent;
