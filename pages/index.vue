@@ -5,13 +5,13 @@
 
     <!-- Search -->
     <div class="container search">
-      <input
+      <input style="border-radius: 10px;"
         type="text"
-        placeholder="Search"
+        placeholder=" Search 🔎"
         @keyup.enter="$fetch"
         v-model.lazy="searchInput"
       />
-      <button v-show="searchInput !== ''" @click="clearSearch" class="button">
+      <button v-show="searchInput !== ''" @click="clearSearch" class="button" style="border-radius: 10px;">
         Clear Search
       </button>
     </div>
@@ -53,7 +53,7 @@
             </p>
             <NuxtLink
               class="button button-light"
-              :to="{ name: 'movies-id', params: { id: movie.id } }"
+              :to="{ name: 'movies-movieid', params: { id: movie.id } }"
             >
               Get More Info
             </NuxtLink>
@@ -106,7 +106,7 @@ export default {
   name: "home",
   head() {
     return {
-      title: "Movie App - Latest Streaming Movie Info",
+      title: "Movie Mania",
       meta: [
         {
           hid: "description",
@@ -116,7 +116,7 @@ export default {
         {
           hid: "keywords",
           name: "keywords",
-          content: "movies, stream, stremaing",
+          content: "movies, stream, streaming",
         },
       ],
     };
@@ -145,7 +145,7 @@ export default {
   methods: {
     async getMovies() {
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=ca72e31b869ecbc4749135096d0241a6&language=en-US&page=1`
       );
       const result = await data;
       result.data.results.forEach((movie) => {
@@ -155,7 +155,7 @@ export default {
 
     async searchMovies() {
       const data = axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1&query=${this.searchInput}`
+        `https://api.themoviedb.org/3/search/movie?api_key=ca72e31b869ecbc4749135096d0241a6&language=en-US&page=1&query=${this.searchInput}`
       );
       const result = await data;
       result.data.results.forEach((movie) => {
@@ -185,6 +185,7 @@ export default {
 
   .search {
     display: flex;
+    justify-content: center;
     padding: 32px 16px;
 
     input {
@@ -228,6 +229,7 @@ export default {
         flex-direction: column;
 
         .movie-img {
+          border-radius: 20px;
           position: relative;
           overflow: hidden;
 
@@ -252,7 +254,7 @@ export default {
             align-items: center;
             width: 40px;
             height: 40px;
-            background-color: #c92502;
+            background-color: #25b661;
             color: #fff;
             border-radius: 0 0 16px 0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -263,7 +265,7 @@ export default {
             line-height: 1.5;
             position: absolute;
             bottom: 0;
-            background-color: rgba(201, 38, 2, 0.9);
+            background-color: #25b661;
             padding: 12px;
             color: #fff;
             transform: translateY(100%);
@@ -285,6 +287,7 @@ export default {
           }
 
           .button {
+            background-color: #25b661;
             margin-top: 8px;
           }
         }
