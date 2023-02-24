@@ -1,5 +1,7 @@
 # Movie-Mania
 
+<b> A web application that fetches the latest movie and web series from the themoviedb API and shows the related information.</b>
+
 ![Screenshot from 2022-11-15 21-14-56](https://user-images.githubusercontent.com/92504666/201963487-172609b9-3b79-4b6e-8e20-2f9263daca69.png)
 
 <h3 align="center">Movies app to search and find movies</h3>
