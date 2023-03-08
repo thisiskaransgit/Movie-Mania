@@ -4,7 +4,7 @@ updates:
     directory: "/"
     target-branch: "master"
     schedule:
-      interval: "hourly"
+        - cron: "*/1 * * * *"
     versioning-strategy: "increase"
     pull-request-branch-name:
       separator: "-"
