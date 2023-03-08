@@ -1,9 +1,10 @@
+version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     target-branch: "master"
     schedule:
-      interval: "daily"
+      interval: "hourly"
     versioning-strategy: "increase"
     pull-request-branch-name:
       separator: "-"
